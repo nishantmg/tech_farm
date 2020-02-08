@@ -16,8 +16,8 @@ import { IonicModule } from '@ionic/angular';
 import { SharedModule } from '../shared/shared.module';
 import { AnimalAddComponent } from './animal-add/animal-add.component';
 import { MyfarmComponent } from './myfarm/myfarm.component';
-// import { Ng2GoogleChartsModule } from 'ng2-google-charts';
-// import {RoundProgressModule} from 'angular-svg-round-progressbar';
+import { Ng2GoogleChartsModule } from 'ng2-google-charts';
+import {RoundProgressModule} from 'angular-svg-round-progressbar';
 import { ProgressComponent } from './progress/progress.component';
 
 
@@ -41,8 +41,8 @@ import { ProgressComponent } from './progress/progress.component';
     IonicModule,
     SharedModule,
     AnimalsRoutingModule,
-    // Ng2GoogleChartsModule,
-    //IonicPageModule.forChild(HomePage)
+    Ng2GoogleChartsModule,
+    // IonicPageModule.forChild(HomePage)
   ]
 })
 export class AnimalsModule { }

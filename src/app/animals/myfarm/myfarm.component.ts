@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Platform } from '@ionic/angular';
-
-declare var google:any;
 
 @Component({
   selector: 'app-myfarm',
@@ -10,31 +7,28 @@ declare var google:any;
 })
 export class MyfarmComponent {
 
-  constructor(
-    public platform:Platform
-  ) {
-    this.platform.ready().then(()=>{
-      google.charts.load('current',{'packages':['coreheart']});
-    })
-   }
+  constructor() { }
 
   ngOnInit() {
-    this.DrawPieChart();
+    this.useAngularLibrary();
   }
 
-  DrawPieChart(){
-    var data = google.visualization.arrayToDataTable([
-      ['vehicle status', 'count'],
-      ['In motion',10],
-      ['Idling',5],
-      ['Stopped',7]
-    ]);
-    var options = {
-      title:'Vehicle count according to their status',
-      is3D:true
-    }
-    var chart = new google.visualization.PieChart(document.getElementById('div_pie'));
-    chart.draw(data,options);
+  pieChartData;
+  useAngularLibrary() {
+    this.pieChartData = {
+      chartType: 'PieChart',
+      dataTable: [
+        ['Languages', 'number'],
+        ['Cow',     20],
+        ['Buffalo',      30],
+        ['Chicken',  50]
+      ],
+      options: {
+      'title': '',
+      'width': 330,
+      'height': 500
+      }
+    };
   }
 
 }

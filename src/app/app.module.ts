@@ -10,6 +10,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { Ng2GoogleChartsModule } from 'ng2-google-charts';
+import { ChartsModule } from 'ng2-charts';
 
 
 
@@ -23,6 +25,8 @@ import { AppRoutingModule } from './app-routing.module';
     IonicModule.forRoot(),
     HttpClientModule,
     AppRoutingModule,
+    Ng2GoogleChartsModule,
+    ChartsModule
     
   ],
   providers: [
