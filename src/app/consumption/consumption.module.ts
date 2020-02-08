@@ -12,7 +12,8 @@ import { IonicModule } from '@ionic/angular';
     CommonModule,
     ConsumptionRoutingModule,
     SharedModule,
-    IonicModule
+    IonicModule,
+    ConsumptionRoutingModule
   ]
 })
 export class ConsumptionModule { }

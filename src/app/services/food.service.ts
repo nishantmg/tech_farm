@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ConsumptionService {
+export class FoodService {
   food_url : string = environment.foods
   constructor(
     private http: HttpClient

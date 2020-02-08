@@ -15,6 +15,8 @@ export class FooterComponent implements OnInit {
   ngOnInit() {}
 
   navigateTab(url: string) {
+    let u = url || '/home';
+    console.log("Url", u);
     this.navController.navigateRoot(url || '/home');
   }
 
