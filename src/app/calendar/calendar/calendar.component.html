@@ -1,0 +1,29 @@
+<app-header></app-header>
+<ion-content padding>
+  <ion-card color="primary">
+    <ion-card-header>
+      <ion-item>
+        <ion-label>Month</ion-label>
+        <ion-select placeholder="Select One">
+          <ion-select-option>Baisakh(April/May)</ion-select-option>
+          <ion-select-option>Jestha(May/June)</ion-select-option>
+          <ion-select-option>Asar(July/August)</ion-select-option>
+          <ion-select-option>Shrawan(August/September)</ion-select-option>
+          <ion-select-option>Bhadra(September/October)</ion-select-option>
+          <ion-select-option>Ashwin(October/November)</ion-select-option>
+          <ion-select-option>kartik(November/December)</ion-select-option>
+          <ion-select-option>Mangsir(Decemner/January)</ion-select-option>
+          <ion-select-option>Falgun(March/April)</ion-select-option>
+          <ion-select-option>Chaitra(April/May)</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <!-- <ion-card-subtitle></ion-card-subtitle> -->
+      <ion-card-title>Crop Calendar</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <google-chart [data]="pieChartData"></google-chart>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<app-footer></app-footer>

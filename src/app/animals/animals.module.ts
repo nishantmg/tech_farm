@@ -42,6 +42,7 @@ import { ProgressComponent } from './progress/progress.component';
     SharedModule,
     AnimalsRoutingModule,
     Ng2GoogleChartsModule,
+    RoundProgressModule
     // IonicPageModule.forChild(HomePage)
   ]
 })

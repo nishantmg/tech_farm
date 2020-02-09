@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Tech Farm
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Cost Estimation</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Animal Type</ion-label>
+        <ion-select placeholder="Select One" >
+          <ion-select-option *ngFor="let animalType of animalTypes" [value]="animalType.code">{{ animalType.animal_type }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Number of Animal</ion-label>
+        <ion-input placeholder="Animal Number"  [(ngModel)]="number"></ion-input>
+      </ion-item>
+      <ion-text color="danger">{{ errorMsg }}</ion-text>
+      <ion-item>
+        <ion-button slot="end" type="button" color="primary" fill="outline" (click)="onCalculate()">Calculate</ion-button>
+      </ion-item>
+      <div id="cost">
+        
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<app-footer></app-footer>

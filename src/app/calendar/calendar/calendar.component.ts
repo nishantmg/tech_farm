@@ -1,27 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-myfarm',
-  templateUrl: './myfarm.component.html',
-  styleUrls: ['./myfarm.component.scss'],
+  selector: 'app-calendar',
+  templateUrl: './calendar.component.html',
+  styleUrls: ['./calendar.component.scss'],
 })
-export class MyfarmComponent {
-
+export class CalendarComponent implements OnInit {
   constructor() { }
-
+ 
   ngOnInit() {
     this.useAngularLibrary();
   }
-
   pieChartData;
+ 
   useAngularLibrary() {
     this.pieChartData = {
       chartType: 'PieChart',
       dataTable: [
         ['Languages', 'number'],
-        ['Poultry',     20],
-        ['Millet',      30],
-        ['Wheat',  50]
+        ['Maize', 30],
+        ['Millet', 25],
+        ['Rice', 30],
+        ['Wheat', 15]
       ],
       options: {
       'title': '',
@@ -29,6 +29,7 @@ export class MyfarmComponent {
       'height': 500
       }
     };
+    console.log("hello")
   }
 
 }

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'account', pathMatch: 'full' },
   { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
   { path: 'consumption',
     loadChildren: './consumption/consumption.module#ConsumptionModule'
@@ -12,6 +12,18 @@ const routes: Routes = [
   },
   { path: 'production',
     loadChildren: './production/production.module#ProductionModule'
+  },
+  { path: 'cost-estimation',
+    loadChildren: './cost-estimation/cost-estimation.module#CostEstimationModule'
+  },
+  { path: 'market',
+    loadChildren: './market/market.module#MarketModule'
+  },
+  { path: 'calendar',
+    loadChildren: './calendar/calendar.module#CalendarModule'
+  },
+  { path: 'account',
+    loadChildren: './account/account.module#AccountModule'
   }
 ];
 

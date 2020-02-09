@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Tech-Farm
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Login</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Username</ion-label>
+        <ion-input placeholder="Username"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Password</ion-label>
+        <ion-input placeholder="Password"></ion-input>
+      </ion-item>
+      <ion-text color="danger">{{ errorMsg }}</ion-text>
+      <ion-item>
+        <ion-button slot="start" type="button" color="primary" fill="outline" routerLink="/account/register" >Register</ion-button>
+        <ion-button slot="end" type="button" color="primary" fill="outline" routerLink="/home" >Login</ion-button>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<app-footer></app-footer>
